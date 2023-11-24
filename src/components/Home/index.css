@@ -1,0 +1,141 @@
+.home-bg-container {
+  background-image: url("../../Images/home_bg_image.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .home-bg-container {
+    height: 75vh;
+  }
+}
+.search-container {
+  margin-left: 8%;
+}
+@media screen and (max-width: 767px) {
+  .search-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+.welcome-heading {
+  margin: 0px;
+  font-weight: 900;
+  font-size: 2.3rem;
+  color: orange;
+  font-family: "Courier New", Courier, monospace;
+}
+@media screen and (max-width: 767px) {
+  .welcome-heading {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: rgb(255, 170, 0);
+  }
+}
+.welcome-description {
+  margin: 10px 0px 4px;
+  font-size: 14px;
+  color: rgb(96, 87, 87);
+  font-style: italic;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .welcome-description {
+    font-size: 11px;
+    color: #fff;
+  }
+}
+.search-box {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  outline: none;
+  margin-top: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-right: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .search-box {
+    padding: 7px;
+  }
+}
+.search-btn {
+  background-color: aqua;
+  height: 34px;
+  width: 80px;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  font-family: monospace;
+}
+.search-btn:hover {
+  color: darkolivegreen;
+  transition: 800ms;
+}
+@media screen and (max-width: 767px) {
+  .search-btn {
+    height: 28px;
+    width: 65px;
+  }
+}
+.find-my-location-btn {
+  height: 32px;
+  padding: 0rem 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: orange;
+  margin-top: 2.5rem;
+  color: #292626;
+  font-family: monospace;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.find-my-location-btn:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  .find-my-location-btn {
+    height: 28px;
+    margin-top: 1rem;
+  }
+}
+.content-bg-container {
+  background-color: #070857;
+}
+.content-container {
+  width: 85%;
+  margin: auto;
+}
+.content-heading {
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 23px;
+  margin-top: 0px;
+  padding-top: 15px;
+}
+.activities-photography-travel-farming-container {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .activities-photography-travel-farming-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.activities-photography-container {
+  margin-right: 1.5rem;
+}
+.description {
+  color: #dad4d4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 2;
+}
+.last-description {
+  padding-bottom: 4rem;
+  margin: 0px;
+}

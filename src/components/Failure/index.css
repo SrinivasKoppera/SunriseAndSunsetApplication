@@ -1,0 +1,42 @@
+/* Failure Container Style */
+.failure-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
+  background-color: #4f46e5;
+  height: 100vh;
+}
+
+.failure-image {
+  width: 350px;
+  margin-bottom: 20px;
+}
+.failure-heading {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 20px) {
+  .failure-heading {
+    font-size: 20px;
+  }
+}
+.failure-description {
+  color: #36383b;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.jobs-failure-button {
+  padding: 6px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  color: #201e1e;
+  background-color: #b8e20d;
+  cursor: pointer;
+  font-weight: 600;
+}

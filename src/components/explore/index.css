@@ -55,3 +55,6 @@
 .sunset-btn:hover {
   opacity: 1;
 }
+.sunset-btn-hide {
+  display: none;
+}

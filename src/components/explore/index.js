@@ -19,12 +19,13 @@ const apiStatusConstants = {
 };
 
 const Explore = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const cityName = location.pathname;
   const substringOfCityName = cityName.substring(1, cityName.length);
   // console.log("This is Location Data", location.state);
-  const navigate = useNavigate();
-
+  const [isShowSunsetSunriseBtn, updateIsShowSunsetSunriseBtn] =
+    useState(false);
   const [todaySunriseAndSunsetData, updateTodaySunriseAndSunsetData] =
     useState("");
   const [tomorrowSunriseAndSunsetData, updateTomorrowSunriseAndSunsetData] =
@@ -133,20 +134,30 @@ const Explore = () => {
           </p>
           <div>
             <div className="sunrise-and-sunset-btn-container">
-              <button
-                type="button"
-                className="btn sunrise-btn"
-                onClick={() => updateSunriseOrSunset(true)}
-              >
-                Sunrise
-              </button>
-              <button
-                type="button"
-                className="btn sunset-btn"
-                onClick={() => updateSunriseOrSunset(false)}
-              >
-                Sunset
-              </button>
+              {isShowSunsetSunriseBtn && (
+                <button
+                  type="button"
+                  className="btn sunrise-btn "
+                  onClick={() => {
+                    updateSunriseOrSunset(true);
+                    updateIsShowSunsetSunriseBtn(!isShowSunsetSunriseBtn);
+                  }}
+                >
+                  Sunrise
+                </button>
+              )}
+              {!isShowSunsetSunriseBtn && (
+                <button
+                  type="button"
+                  className="btn sunset-btn"
+                  onClick={() => {
+                    updateSunriseOrSunset(false);
+                    updateIsShowSunsetSunriseBtn(!isShowSunsetSunriseBtn);
+                  }}
+                >
+                  Sunset
+                </button>
+              )}
             </div>
 
             <Sunrise

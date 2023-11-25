@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClear } from "react-icons/md";
 import logo from "../../Images/Sunrise1.png"; //sunrise-sunset-logo.svg
@@ -6,7 +6,21 @@ import { useState } from "react";
 import "./index.css";
 
 const Header = (props) => {
-  const { currentLocation } = props;
+  // const { currentLocation } = props;
+  const navigate = useNavigate();
+
+  const currentLocation = () => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        navigate("/your-location", { state: { latitude, longitude } });
+      },
+      (error) => {
+        navigate("/failure");
+      }
+    );
+  };
   const [homeBtn, updateHomeBtnStatus] = useState(false);
 
   const chnageHomeBtnStatus = () => {

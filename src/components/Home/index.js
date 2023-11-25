@@ -6,14 +6,28 @@ import Footer from "../Footer";
 import "./index.css";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const currentLocation = () => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        navigate("/your-location", { state: { latitude, longitude } });
+      },
+      (error) => {
+        navigate("/failure");
+      }
+    );
+  };
+
   return (
     <div className="bg-container">
       <Header />
       <SearchContainer
-      // onChangeCityName={onChangeCityName}
-      // currentLocation={currentLocation}
-      // searchCityByEnterKey={searchCityByEnterKey}
-      // city={city}
+        // onChangeCityName={onChangeCityName}
+        currentLocation={currentLocation}
+        // searchCityByEnterKey={searchCityByEnterKey}
+        // city={city}
       />
       <div className="content-bg-container">
         <div className="content-container">

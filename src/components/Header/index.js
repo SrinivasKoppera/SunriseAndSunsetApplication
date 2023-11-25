@@ -47,7 +47,11 @@ const Header = (props) => {
           </Link>
           <ul className="nav-menu">
             <li className="nav-menu-item">
-              <Link to="/" className="nav-link" onClick={currentLocation}>
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => currentLocation()}
+              >
                 FIND MY LOCATION
               </Link>
             </li>
@@ -58,7 +62,11 @@ const Header = (props) => {
         <div className="nav-menu-mobile">
           <ul className="nav-menu-list-mobile">
             <li className="nav-menu-item-mobile">
-              <Link to="/" className="nav-link" onClick={currentLocation}>
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => currentLocation()}
+              >
                 FIND MY LOCATION
               </Link>
             </li>

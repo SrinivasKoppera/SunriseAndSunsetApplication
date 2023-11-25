@@ -65,7 +65,7 @@ const SearchContainer = (props) => {
         <button
           type="button"
           className="find-my-location-btn"
-          onClick={currentLocation}
+          onClick={() => currentLocation()}
         >
           Find my location
         </button>
